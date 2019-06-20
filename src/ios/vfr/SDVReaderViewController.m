@@ -1126,8 +1126,7 @@ static UIColor *previousColor;
     UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
     
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
-        
-        statusBar.backgroundColor = previousColor;//set whatever color you like
+        statusBar.backgroundColor = [UIColor clearColor]; // reset to clear color
     }
     [super viewWillDisappear:animated];
     
